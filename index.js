@@ -16,16 +16,18 @@ document.querySelectorAll("button")[1].addEventListener("click",function(){
 function flip(number){
     document.querySelector("img").classList.toggle("rotate45");
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate90");},100);
-    if(number===1){
-        document.querySelector("img").src="./Heads.png";
-    }
-    else{
-        document.querySelector("img").src="./Tails.png";
-    }
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate90");},200);
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate45");},300);
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate45");},400);
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate90");},500);
+    setTimeout(function(){
+        if(number===1){
+        document.querySelector("img").src="./Heads.png";
+        }
+        else{
+        document.querySelector("img").src="./Tails.png";
+        }
+    },500);
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate90");},600);
     setTimeout(function(){document.querySelector("img").classList.toggle("rotate45");},700);
     if(number===1){
